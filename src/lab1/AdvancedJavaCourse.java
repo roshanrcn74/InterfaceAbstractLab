@@ -46,7 +46,12 @@ public class AdvancedJavaCourse extends ObjectOrientedCourse{
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
+    }
+
+    @Override
+    public double getCredits() {
+        return credits;
     }
 
     @Override
