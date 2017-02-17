@@ -6,7 +6,7 @@ package lab1;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse extends ObjectOrientedCourse{
+public class IntroJavaCourse extends ITCourse{
     private String courseName;
     private String courseNumber;
     private double credits;
@@ -33,12 +33,10 @@ public class IntroJavaCourse extends ObjectOrientedCourse{
     }
 
 
-    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
-    @Override
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;
     }

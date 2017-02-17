@@ -51,7 +51,7 @@ public class IntroToProgrammingCourse extends ITCourse{
 
     @Override
     public String getCourseName() {
-        return courseName;
+        return courseName.toUpperCase();
     }
 
     @Override

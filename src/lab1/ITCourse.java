@@ -10,25 +10,22 @@ package lab1;
  * @author roshann
  */
 public abstract class ITCourse {
-    private String courseName;
-    private String courseNumber;
+    //private String courseName;
+    //private String courseNumber;
     private double credits;
+    
 
     public abstract String getCourseName();
   
 
     public abstract void setCourseName(String courseName);
     
-    public String getCourseNumber() {
-        return courseNumber;
-    }
+    public abstract String getCourseNumber();
 
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
+    public abstract void setCourseNumber(String courseNumber);
 
-    public double getCredits() {
-        return credits;
+    public double getCredits(){
+        return this.credits;
     }
 
     public abstract void setCredits(double credits);
