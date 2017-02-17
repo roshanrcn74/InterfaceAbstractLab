@@ -50,7 +50,7 @@ public class IntroToProgrammingCourse implements ITCourse{
 
     @Override
     public String getCourseName() {
-        return courseName;
+        return courseName.toUpperCase();
     }
 
     @Override

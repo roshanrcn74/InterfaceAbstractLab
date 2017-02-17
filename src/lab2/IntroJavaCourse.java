@@ -48,7 +48,7 @@ public class IntroJavaCourse implements ITCourse{
 
     @Override
     public String getCourseName() {
-        return this.courseName;
+        return this.courseName.toUpperCase();
     }
 
     @Override
