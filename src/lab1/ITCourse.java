@@ -10,8 +10,8 @@ package lab1;
  * @author roshann
  */
 public abstract class ITCourse {
-    //private String courseName;
-    //private String courseNumber;
+    private String courseName;
+    private String courseNumber;
     private double credits;
     
 
