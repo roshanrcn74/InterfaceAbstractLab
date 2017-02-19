@@ -5,17 +5,17 @@
  */
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author roshann
  */
-public abstract class ObjectOrientedCourse extends ITCourse{
-    private String prerequisites;
-    
-    public abstract void setPrerequisites(String prerequisites);
-
-    public String getPrerequisites() {
-        return prerequisites;
+public class GUIReportOutput extends ReportService {
+    @Override
+    public void outputReport() {
+        JOptionPane.showMessageDialog(null, getReport());
+        clearReport();
     }
     
 }

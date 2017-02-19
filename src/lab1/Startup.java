@@ -13,7 +13,8 @@ import java.util.List;
  * @author roshann
  */
 public class Startup {
-    public static void main(String[] args) {      
+    public static void main(String[] args) {  
+        College WCTC = new College();
         IntroJavaCourse introJavaCource = new IntroJavaCourse("Introduction To Java", "C001");
         introJavaCource.setCredits(2.0);
         introJavaCource.setPrerequisites("Intro Programming");
@@ -25,16 +26,11 @@ public class Startup {
         advanceJava.setCredits(3.0);
         advanceJava.setPrerequisites("Intro Java");
         
-        List <ITCourse> courseList = new ArrayList();
-        courseList.add(advanceJava);
-        courseList.add(introToPro);
-        courseList.add(introJavaCource);
+        WCTC.addCourseToSemister(introToPro, 1);
+        WCTC.addCourseToSemister(introJavaCource, 2);
+        WCTC.addCourseToSemister(advanceJava, 3);
         
-        for (ITCourse cource : courseList){
-            System.out.println("Course Name : " + cource.getCourseName() + "\t\t Credit ---> " + cource.getCredits());
-            
-            //System.out.println("No of Credit: " + cource.getCredits());
-            
-        }
+        WCTC.displayCourseList();
+
     }
 }
