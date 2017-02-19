@@ -5,9 +5,6 @@
  */
 package lab1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author roshann
@@ -27,10 +24,20 @@ public class Startup {
         advanceJava.setPrerequisites("Intro Java");
         
         WCTC.addCourseToSemister(introToPro, 1);
+        
+        WCTC.addCourseToSemister(introToPro, 2);
         WCTC.addCourseToSemister(introJavaCource, 2);
+        
+        WCTC.addCourseToSemister(introToPro, 3);
+        WCTC.addCourseToSemister(introJavaCource, 3);
         WCTC.addCourseToSemister(advanceJava, 3);
         
         WCTC.displayCourseList();
+        
+        WCTC.displaySemesterCourseList(3);
+        
+        //System.out.println("course Name " + WCTC.getSemisterCourseList(1).get(0).getCourseName());
+     
 
     }
 }
