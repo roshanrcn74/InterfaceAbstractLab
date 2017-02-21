@@ -63,7 +63,7 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
     }
 
     @Override
-    public void setCourseName(String courseName) {
+    public final void setCourseName(String courseName) {
         super.setCourseName(courseName);
     }
 
@@ -73,7 +73,7 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
     }
 
     @Override
-    public void setCourseNumber(String courseNumber) {
+    public final void setCourseNumber(String courseNumber) {
         super.setCourseNumber(courseNumber);
     }
     

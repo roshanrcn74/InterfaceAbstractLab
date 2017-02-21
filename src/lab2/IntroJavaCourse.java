@@ -6,15 +6,17 @@ package lab2;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse implements ITCourse{
+public class IntroJavaCourse implements ProgrammingCourse{
     private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
+    private final ReportService RS;
 
     public IntroJavaCourse(String courseName, String courseNumber) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
+        RS = new ConsoleOutput();
     }
 
     @Override
@@ -34,6 +36,12 @@ public class IntroJavaCourse implements ITCourse{
 
     @Override
     public void setCredits(double credits) {
+        if(credits < 0 || credits > 5.0) {
+            this.RS.addData("Error: credits must be in the "
+                    + "range 0.5 to 4.0");
+            throw new IllegalArgumentException("Error: credits must be in the "
+                    + "range 0.5 to 4.0");
+        }
         this.credits = credits;
     }
 

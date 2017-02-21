@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab1;
+package lab2;
+
 
 /**
  *
@@ -11,7 +12,7 @@ package lab1;
  */
 public class Startup {
     public static void main(String[] args) {  
-        College college = new College("Waukesha Country Tech College");
+        College college = new College("Carrol College");
         IntroJavaCourse introJavaCource = new IntroJavaCourse("Introduction To Java", "C001");
         introJavaCource.setCredits(2.0);
         introJavaCource.setPrerequisites("Intro Programming");

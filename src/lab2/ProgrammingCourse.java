@@ -9,7 +9,8 @@ package lab2;
  *
  * @author roshann
  */
-public interface ITCourse {
+public interface ProgrammingCourse {
+    
     
     public abstract String getCourseName();
   

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab1;
+package lab2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ import java.util.List;
 public class College {
     private String name;
     private final ReportService RS;
-    private final List<ProgrammingCourse>[] semesterInventory;
+    private List<ProgrammingCourse>[] semesterInventory;
 
     public College(String name) {
-        setName(name);
+        this.name = name;
         RS = new GUIReportOutput();
         this.semesterInventory = new ArrayList[3]; 
         this.semesterInventory[0] = new ArrayList();
@@ -41,7 +41,7 @@ public class College {
     }
     
     public void displaySemesterCourseList(int semester){
-        this.RS.addData("Semester " + (semester) + "  Course(s) Name");
+        this.RS.addData("Semester " + (semester) + "  Course Name");
         semesterInventory[semester-1].forEach((course) -> {
             this.RS.addData("\t" + course.getCourseName());
         });   
@@ -50,13 +50,13 @@ public class College {
     
     public void displayCourseList(){
         for (int i = 0; i < semesterInventory.length; i++){
-            this.RS.addData("Semester " + (i+1) + "  Course(s) Name");
+            this.RS.addData("Semester " + (i+1) + "  Course Name");
             for(ProgrammingCourse course : semesterInventory[i]){
                 this.RS.addData("\t" + course.getCourseName());
             }   
         }
         this.RS.outputReport();
-    }  
+    } 
     
     public void reportService(String report){
         RS.clearReport();
@@ -68,8 +68,8 @@ public class College {
     public String getName() {
         return name;
     }
-    
-    public final void setName(String name){
+
+    public void setName(String name) {
         if (name == null || name.isEmpty()){
             this.RS.addData("Error: collegeName cannot be "
                     + "null of empty string");
@@ -78,4 +78,6 @@ public class College {
         } 
         this.name = name;
     }
+    
+    
 }
