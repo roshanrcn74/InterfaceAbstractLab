@@ -50,9 +50,9 @@ public class College {
     
     public void displayCourseList(){
         for (int i = 0; i < semesterInventory.length; i++){
-            this.RS.addData("Semester " + (i+1) + "  Course(s) Name");
+            this.RS.addData("Semester " + (i+1) + "  Course(s) Name" + "\t" + "Credit");
             for(ProgrammingCourse course : semesterInventory[i]){
-                this.RS.addData("\t" + course.getCourseName());
+                this.RS.addData("\t" + course.getCourseName() + "\t" + course.getCredits());
             }   
         }
         this.RS.outputReport();
